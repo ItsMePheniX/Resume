@@ -1,0 +1,146 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Font options
+\usepackage[sfdefault]{roboto}  % Sans-serif font
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge V Aditya Teja} \\
+  \small +91 9059559278 $|$ \href{mailto:aadityaa5000@gmail.com}{aadityaa5000@gmail.com} $|$ 
+  \href{https://www.linkedin.com/in/VAdityaTeja/}{www.linkedin.com/in/VAdityaTeja/} $|$
+  \href{https://github.com/ItsMePheniX}{github.com/ItsMePheniX}
+\end{center}
+
+\section*{Summary}
+Aspiring Software Architect with a solid foundation in backend development, system design, and DevOps. Proficient in C++, Python, and Node.js, with hands-on experience building scalable APIs, containerized applications, and robust database-driven systems. Currently focused on optimizing system performance and enhancing architectural thinking through practical experience. Committed to designing efficient, reliable, and secure software systems that support impactful, real-world solutions. 
+
+\section{Technical Skills}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Programming Languages}: C++ (4/5), Python (4/5), Java (3/5), SQL (3.5/5), Node.js (3.5/5)  }
+  \resumeItem{\textbf{Backend \& DevOps Tools}: Docker, Postman, Git, pgAdmin, Nginx, PM2}
+  \resumeItem{\textbf{Libraries \& Frameworks}:  Scikit-learn, Matplotlib, OpenCV,yoloV8n }
+  \resumeItem{\textbf{Others }:  REST APIs, Linux CLI, VS Code, VS 2022, GitHub  }
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Health Monitoring Application}{Feb 2025}
+      {Full-Stack Project}{Python, TensorFlow, OpenCV}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Designed and developed a full-stack health monitoring system enabling users to manage personal health data and prescriptions.}
+          \resumeItem{\textbullet\ Integrated a MedPalm-inspired AI to identify potential medication conflicts based on historical health records}
+          \resumeItem{\textbullet\ Implemented secure data handling and scalable backend architecture using Node.js,Python and MongoDB to support real-time recommendations.}
+      \resumeSubHeadingListEnd
+  \resumeSubheading
+      {AI Powered Pedestrain assistant for blind people}{Aug 2022 -- Dec 2022} 
+      {DeepLearning and IOT Project}{Python, Flask, NLTK, Hugging Face}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Engineered an IoT-based smart navigation system using YOLOv8n for real-time object detection to assist visually impairedindividuals.}
+          \resumeItem{\textbullet\ Integrated Raspberry Pi with camera modules and OpenCV to detect obstacles and deliver audio navigation prompts.}
+          \resumeItem{\textbullet\ Optimized system performance with lightweight ML models for reliable on-device inference in outdoor environments.}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+% \section{Experience}
+% \resumeSubHeadingList
+%   \resumeSubheading
+%       {AI Research Intern}{June 2022 -- Aug 2022}
+%       {DeepMind}{London, UK}
+%       \resumeSubHeadingList
+%           \resumeItem{\textbullet\ Conducted research on reinforcement learning algorithms for robotics}
+%           \resumeItem{\textbullet\ Implemented and evaluated deep RL models using PyTorch and RLlib}
+%           \resumeItem{\textbullet\ Presented findings at weekly research meetings}
+%       \resumeSubHeadingListEnd
+%   \resumeSubheading
+%       {Machine Learning Engineer}{Jan 2021 -- May 2022}
+%       {Acme AI Solutions}{San Francisco, CA}
+%       \resumeSubHeadingList
+%           \resumeItem{\textbullet\ Developed and deployed machine learning models for various industries}
+%           \resumeItem{\textbullet\ Optimized model performance and ensured data quality}
+%           \resumeItem{\textbullet\ Collaborated with cross-functional teams to deliver AI solutions}
+%       \resumeSubHeadingListEnd
+% \resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Vellore Institute of Technology}{Bhopal, India}
+      {Bachelor of Computer Science and Engineering}{Sep 2023 -- May 2027}
+  \resumeSubheading
+      {Fiitjee Junior College}{Hyderabad, India}
+      {12th}{Aug 2020 -- May 2022}
+  \resumeSubheading
+      {FiitJee World School}{Hyderabad, India}
+      {7th - 10th}{June 2017 -- May 2020}
+\resumeSubHeadingListEnd
+
+% \section{Certifications}
+% \resumeSubHeadingList
+%   \resumeItem{\textbullet\ AWS Certified Machine Learning - Specialty}
+%   \resumeItem{\textbullet\ TensorFlow Developer Certificate}
+% \resumeSubHeadingListEnd
+
+\section{Achievement}
+  \resumeSubheading
+      {Health Hackathon}{Feb 2025} 
+      {}{}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Reached the final stage among  500+ teams all across India.}
+          \resumeItem{\textbullet\ Served as the primary Backend Developer, designing scalable API's and integrating real-time data from the database for analytics.}
+          \resumeItem{\textbullet\ In collaboration of VIT Bhopal and John Hopkins Uviversity.}
+      \resumeSubHeadingListEnd
+
+
+\resumeSubHeadingListEnd
+\end{document}
