@@ -165,7 +165,7 @@
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{The Bits and Bytes of Computer Networking} $|$ \emph{Google}}{Issued Nov 2025}
+{\textbf{The Bits and Bytes of Computer Networking} $|$ \emph{Google (Coursera)} $|$ \href{https://drive.google.com/drive/folders/1RQofL8EjSnjCzen-3l2IoN6wfLrucP9d?usp=sharing}{\underline{View Folder}}}{Issued Nov 2025}
 \resumeItemListStart
     \resumeItem{Mastered the \textbf{five-layer network model}, routing algorithms, and infrastructure troubleshooting techniques.}
 \resumeItemListEnd
