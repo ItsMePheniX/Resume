@@ -1,4 +1,11 @@
-\documentclass[letterpaper,10pt]{article}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,134 +20,163 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-% Font options
-\usepackage[sfdefault]{roboto}  % Sans-serif font
-
 \pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
+\fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Adjust margins to fit on one page
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-0.7in} 
+\addtolength{\textheight}{1.4in} 
+\setlength{\footskip}{12pt} % Fixed the fancyhdr warning
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
-\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large 
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure PDF is machine readable
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
+%-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{\item\small{#1}}
-\newcommand{\resumeSubheading}[4]{
-\vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}} 
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
+%----------HEADING----------
 \begin{center}
-  \textbf{\Huge V Aditya Teja} \\
-  \small +91 9059559278 $|$ \href{mailto:aadityaa5000@gmail.com}{aadityaa5000@gmail.com} $|$ 
-  \href{https://www.linkedin.com/in/VAdityaTeja/}{www.linkedin.com/in/VAdityaTeja/} $|$
-  \href{https://github.com/ItsMePheniX}{github.com/ItsMePheniX}
+    \textbf{\Huge V Aditya Teja} \\ \vspace{1pt}
+    \small +91 9059559278 $|$ \href{mailto:aadityaa5000@gmail.com}{\underline{aadityaa5000@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/vadityateja}{\underline{www.linkedin.com/in/vadityateja}} $|$
+    \href{https://github.com/ItsMePheniX}{\underline{https://github.com/ItsMePheniX}}
 \end{center}
 
-\section*{Summary}
-Aspiring Software Architect with a solid foundation in backend development, system design, and DevOps. Proficient in C++, Python, and Node.js, with hands-on experience building scalable APIs, containerized applications, and robust database-driven systems. Currently focused on optimizing system performance and enhancing architectural thinking through practical experience. Committed to designing efficient, reliable, and secure software systems that support impactful, real-world solutions. 
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
 
-\section{Technical Skills}
-\resumeSubHeadingList
-  \resumeItem{\textbf{Programming Languages}: C++ (4/5), Python (4/5), Java (3/5), SQL (3.5/5), Node.js (3.5/5)  }
-  \resumeItem{\textbf{Backend \& DevOps Tools}: Docker, Postman, Git, pgAdmin, Nginx, PM2}
-  \resumeItem{\textbf{Libraries \& Frameworks}:  Scikit-learn, Matplotlib, OpenCV,yoloV8n }
-  \resumeItem{\textbf{Others }:  REST APIs, Linux CLI, VS Code, VS 2022, GitHub  }
+\resumeSubheading
+{Vyomfix Labs Pvt. Ltd.}{May 2026 -- Present}
+{Software Development Engineer Intern}{Bengaluru, India}
+\resumeItemListStart
+    \resumeItem{\textbf{Engineered} production-grade Go REST APIs processing \textbf{10,000+ daily requests}, utilizing \textbf{JWT-secured endpoints} and \textbf{Role-Based Access Control (RBAC)} to enable seamless frontend integration.}
+    \resumeItem{\textbf{Optimized} SQL queries and implemented \textbf{Row-Level Security (RLS)} to eliminate \textbf{N+1 bottlenecks}, reducing database latency by \textbf{35\%} and lowering cloud compute costs by \textbf{20\%}.}
+    \resumeItem{\textbf{Integrated} Amazon Bedrock and constructed Python (\texttt{ai-stack}) \textbf{AI pipeline components}, automating extraction workflows for over \textbf{5,000 documents monthly}.}
+    \resumeItem{\textbf{Architected} an \textbf{S3-based ingestion pipeline} managing \textbf{50+ GB} of daily data, enforcing \textbf{presigned uploads}, \textbf{AES encryption}, and strict \textbf{credential management} to mitigate unauthorized access.}
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
-
+%-----------PROJECTS-----------
 \section{Projects}
-\resumeSubHeadingList
-  \resumeSubheading
-      {Health Monitoring Application}{Feb 2025}
-      {Full-Stack Project}{Python, TensorFlow, OpenCV}
-      \resumeSubHeadingList
-          \resumeItem{\textbullet\ Designed and developed a full-stack health monitoring system enabling users to manage personal health data and prescriptions.}
-          \resumeItem{\textbullet\ Integrated a MedPalm-inspired AI to identify potential medication conflicts based on historical health records}
-          \resumeItem{\textbullet\ Implemented secure data handling and scalable backend architecture using Node.js,Python and MongoDB to support real-time recommendations.}
-      \resumeSubHeadingListEnd
-  \resumeSubheading
-      {AI Powered Pedestrain assistant for blind people}{Aug 2022 -- Dec 2022} 
-      {DeepLearning and IOT Project}{Python, Flask, NLTK, Hugging Face}
-      \resumeSubHeadingList
-          \resumeItem{\textbullet\ Engineered an IoT-based smart navigation system using YOLOv8n for real-time object detection to assist visually impairedindividuals.}
-          \resumeItem{\textbullet\ Integrated Raspberry Pi with camera modules and OpenCV to detect obstacles and deliver audio navigation prompts.}
-          \resumeItem{\textbullet\ Optimized system performance with lightweight ML models for reliable on-device inference in outdoor environments.}
-      \resumeSubHeadingListEnd
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+{\textbf{MetroInFlow} $|$ \href{https://github.com/ItsMePheniX/MetroInflow}{\underline{GitHub}} $|$ \textbf{React}, \textbf{Tailwind CSS}, \textbf{Supabase}, \textbf{Go}, \textbf{Docker}, \textbf{GCP}}{Sep 2025 -- Dec 2025}
+\resumeItemListStart
+    \resumeItem{\textbf{Spearheaded} the development of a centralized \textbf{Electronic Document Management System (EDMS)} for Kochi Metro (Smart India Hackathon), replacing manual processes and accelerating document workflow efficiency by \textbf{40\%}.}
+    \resumeItem{\textbf{Designed} a distributed \textbf{Go backend} leveraging \textbf{goroutines} for asynchronous database polling, effectively offloading heavy \textbf{Optical Character Recognition (OCR)} and LLM tasks to dedicated \textbf{Python/FastAPI microservices}.}
+    \resumeItem{\textbf{Deployed} containerized APIs and user interfaces across \textbf{GCP} and \textbf{Render}, establishing secure \textbf{Cloudflare Tunnels} to expose local machine learning models with near-zero downtime.}
+\resumeItemListEnd
 
-% \section{Experience}
-% \resumeSubHeadingList
-%   \resumeSubheading
-%       {AI Research Intern}{June 2022 -- Aug 2022}
-%       {DeepMind}{London, UK}
-%       \resumeSubHeadingList
-%           \resumeItem{\textbullet\ Conducted research on reinforcement learning algorithms for robotics}
-%           \resumeItem{\textbullet\ Implemented and evaluated deep RL models using PyTorch and RLlib}
-%           \resumeItem{\textbullet\ Presented findings at weekly research meetings}
-%       \resumeSubHeadingListEnd
-%   \resumeSubheading
-%       {Machine Learning Engineer}{Jan 2021 -- May 2022}
-%       {Acme AI Solutions}{San Francisco, CA}
-%       \resumeSubHeadingList
-%           \resumeItem{\textbullet\ Developed and deployed machine learning models for various industries}
-%           \resumeItem{\textbullet\ Optimized model performance and ensured data quality}
-%           \resumeItem{\textbullet\ Collaborated with cross-functional teams to deliver AI solutions}
-%       \resumeSubHeadingListEnd
-% \resumeSubHeadingListEnd
+\resumeProjectHeading
+{\textbf{KDE Plugin for Wallpaper Engine} $|$ \href{https://github.com/ItsMePheniX/KDE-Plugin-for-Wallpaper-Engine}{\underline{GitHub}} $|$ \textbf{C++17}, \textbf{QML}, \textbf{CMake}, \textbf{Qt6}, \textbf{JSON}}{Sep 2025 -- Present}
+\resumeItemListStart
+    \resumeItem{\textbf{Authored} a custom \textbf{KDE Plasma 6} wallpaper extension to bridge compatibility gaps, enabling native, \textbf{60 FPS playback} of \textbf{Steam Wallpaper Engine} animated backgrounds on Linux environments.}
+    \resumeItem{\textbf{Programmed} a highly efficient \textbf{C++ backend} utilizing a custom \textbf{QAbstractListModel} to auto-scan Steam Workshop directories, parsing \textbf{project.json} metadata to reliably index \textbf{MP4/WebM} assets.}
+    \resumeItem{\textbf{Formulated} a responsive \textbf{QML configuration interface} and a robust \textbf{CMake build pipeline}, incorporating \textbf{Git versioning} and a \textbf{CTest suite} to streamline CI/CD-ready system installations.}
+\resumeItemListEnd
 
-\section{Education}
-\resumeSubHeadingList
-  \resumeSubheading
-      {Vellore Institute of Technology}{Bhopal, India}
-      {Bachelor of Computer Science and Engineering}{Sep 2023 -- May 2027}
-  \resumeSubheading
-      {Fiitjee Junior College}{Hyderabad, India}
-      {12th}{Aug 2020 -- May 2022}
-  \resumeSubheading
-      {FiitJee World School}{Hyderabad, India}
-      {7th - 10th}{June 2017 -- May 2020}
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
 
-% \section{Certifications}
-% \resumeSubHeadingList
-%   \resumeItem{\textbullet\ AWS Certified Machine Learning - Specialty}
-%   \resumeItem{\textbullet\ TensorFlow Developer Certificate}
-% \resumeSubHeadingListEnd
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+    \textbf{Core Competencies}{: Data Structures \& Algorithms (DSA), Distributed Systems Architecture, TCP/IP \& DNS Configuration} \\
+    \textbf{Languages}{: C/C++, Go, Python, Java, SQL (PostgreSQL, Supabase), Bash} \\
+    \textbf{Developer Tools}{: Git, Docker, Postman, Kafka, Redis, Jira, Nginx} \\
+    \textbf{Libraries}{: OpenCV, \texttt{database/sql}, \texttt{net/http}, Uvicorn} \\
+    \textbf{Frameworks}{: Qt6, gRPC, FastAPI} \\
+    \textbf{Operating Systems}{: Linux (Arch, Fedora), macOS, Windows}
+}}
+\end{itemize}
 
-\section{Achievement}
-  \resumeSubheading
-      {Health Hackathon}{Feb 2025} 
-      {}{}
-      \resumeSubHeadingList
-          \resumeItem{\textbullet\ Reached the final stage among  500+ teams all across India.}
-          \resumeItem{\textbullet\ Served as the primary Backend Developer, designing scalable API's and integrating real-time data from the database for analytics.}
-          \resumeItem{\textbullet\ In collaboration of VIT Bhopal and John Hopkins Uviversity.}
-      \resumeSubHeadingListEnd
+%-----------EDUCATION & CERTIFICATIONS-----------
+\section{Education \& Certifications}
+\resumeSubHeadingListStart
 
+\resumeSubheading
+{Vellore Institute of Technology}{Bhopal, India}
+{Bachelor of Technology in Computer Science and Engineering}{Sep 2023 -- May 2027}
+
+\resumeProjectHeading
+{\textbf{Google IT Support Professional Certificate} $|$ \href{https://drive.google.com/drive/folders/1RQofL8EjSnjCzen-3l2IoN6wfLrucP9d?usp=sharing}{\underline{View Folder}}}{Issued Feb 2024}
+\resumeItemListStart
+    \resumeItem{Completed a five-course specialization covering \textbf{TCP/IP, DNS, operating systems, and security fundamentals}.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{The Bits and Bytes of Computer Networking} $|$ \emph{Google}}{Issued Nov 2025}
+\resumeItemListStart
+    \resumeItem{Mastered the \textbf{five-layer network model}, routing algorithms, and infrastructure troubleshooting techniques.}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
+
+%-----------AWARDS & ACHIEVEMENTS-----------
+\section{Awards \& Achievements}
+\resumeItemListStart
+    \resumeItem{\textbf{Silver Medal Winner (Top 1\% of 200+ Teams):} Awarded at Health Hackathon 2024 for developing \textbf{MargDarshak} (\href{https://github.com/ItsMePheniX/Marg-Darshak}{\underline{GitHub}}), an AI-powered navigation assistant using \textbf{YOLOv8n} and real-time text-to-speech.}
+    \resumeItem{\textbf{National Finalist:} Selected at Health Hackathon 2024 for \textbf{HealthMenta.ai} (\href{https://github.com/Aanandvyas/Health_Hackathon}{\underline{GitHub}}), a diagnostic backend platform engineered for \textbf{99.9\% uptime} on \textbf{Google Cloud Platform (GCP)}.}
+\resumeItemListEnd
+%-------------------------------------------
 \end{document}
